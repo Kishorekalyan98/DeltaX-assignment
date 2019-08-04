@@ -22,15 +22,15 @@
   opacity: 1;
   pointer-events: auto;
 }
-.modal-window > div {
+.modal-window .modal-content {
   width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 2em;
-  border: 1px solid #f1f1f1;
-  background: #fafafa;
+  padding: 1em;
+  border: 1px solid #000;
+  background: #fff;
 }
 .modal-window header {
   font-weight: bold;
@@ -53,9 +53,6 @@
 .modal-close:hover {
   color: black;
 }
-.modal-window div:not(:last-of-type) {
-  margin-bottom: 15px;
-}
 .form-horizontal .control-label {
     /* text-align:right; */
     text-align: left;
@@ -74,4 +71,10 @@
 }
 .buttons .btn {
     margin-left: 20px;
+}
+.add-star {
+    float: right; position: relative; left: 100%
+}
+.margin-bottom-plot {
+    margin-bottom: 35px;
 }

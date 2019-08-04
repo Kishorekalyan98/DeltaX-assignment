@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from './modal';
 import MoviesRow from './moviesRow';
 class Movies extends React.Component {
     constructor(props) {
@@ -38,7 +37,6 @@ class Movies extends React.Component {
                         {this.rows()}
                     </tbody>
                 </table>
-                <Modal />
             </div>       
         );
     }

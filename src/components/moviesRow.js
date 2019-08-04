@@ -13,7 +13,7 @@ class MoviesRow extends React.Component {
                 <td>{this.rowData.releaseYear}</td>
                 <td>{this.rowData.plot}</td>
                 <td>{this.rowData.cast}</td>
-                <td><a className="btn" href="#open-modal">Edit</a></td>
+                <td><a className="btn" href="javascript:void(0);">Edit</a></td>
             </tr>
         );
     }
