@@ -11,9 +11,10 @@ class Navigation extends React.Component {
                 <div className="container-fluid">
                     <div id="navbar" className="navbar-collapse">
                         <ul className="nav navbar-nav">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/add-movie">Add Movie</Link></li>
-                            <li><a href="javascript:void(0)">Contact</a></li>
+                            <li className="active"><Link to="/">Home</Link></li>
+                            <li><a href="javascript:void(0)">TV Shows</a></li>
+                            <li><a href="javascript:void(0)">Celebrities</a></li>
+                            <li><a href="javascript:void(0)">Watch List</a></li>
                         </ul>
                         <Search />
                     </div>
