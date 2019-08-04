@@ -119,7 +119,7 @@ class AddMovie extends React.Component {
                             <textarea className="form-control pull-right" id="plot" ></textarea>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="poster" className="pull-left">Poster</label>
+                            <label htmlFor="poster" className="pull-left">Poster ( Recommended size 300x444px )</label>
                             <input type="file" onChange={(e) => this.fileOnChange(e)} className="form-control pull-right" id="poster" accept="image/*" />
                         </div>
                         <div className="form-group">
