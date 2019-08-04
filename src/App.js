@@ -16,7 +16,7 @@ class App extends React.Component {
                 <div className="row content-area">
                     <div className="col-xs-12">
                         <h2 className="pull-left">Top 1O Movies 2019</h2>
-                        <button type="button" class="btn btn-primary pull-right marginTop">Add Movie</button>
+                        <a href="/add-movie" class="btn btn-primary pull-right marginTop">+ Add Movie</a>
                         <Movies movies={[]} />
                     </div>
                 </div>

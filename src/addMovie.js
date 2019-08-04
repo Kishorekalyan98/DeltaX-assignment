@@ -7,12 +7,16 @@ import Header from './components/header';
 class AddMovie extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            "image" : ""
+        }
+        this.saveBtn = this.saveBtn.bind(this);
     }
     saveBtn() {
         let movieName = document.getElementById('movieName').value;
         let yearRelease = document.getElementById('yearRelease').value;
         let plot = document.getElementById('plot').value;
-        let poster = document.getElementById('poster').value;
+        let poster = this.state.image;
         let cast = document.getElementById('cast');
         let castAsString = "";
         for (var i = 0; i < cast.options.length; i++) {
@@ -21,6 +25,7 @@ class AddMovie extends React.Component {
             }
         }
         let buildObjQuery = {};
+        console.log(document.getElementById('poster'));
         buildObjQuery['name'] = movieName;
         buildObjQuery['releaseYear'] = yearRelease;
         buildObjQuery['plot'] = plot;
@@ -33,6 +38,15 @@ class AddMovie extends React.Component {
         })
             .then((data) => { alert("Success"); window.location.href = "/"; } )
             .catch((error) => console.log(error))
+    }
+    fileOnChange(e) {
+        let files = e.target.files;
+        let reader = new FileReader();
+        reader.readAsDataURL(files[0]);
+        reader.onload = (e) => {
+            //this.uploadedImage = e.target.result;
+            this.setState({image : e.target.result});
+        };
     }
     render() {
         return (
@@ -55,7 +69,7 @@ class AddMovie extends React.Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="poster" className="pull-left">Poster</label>
-                            <input type="text" className="form-control pull-right" id="poster" />
+                            <input type="file" onChange={(e) => this.fileOnChange(e)} className="form-control pull-right" id="poster" accept="image/*" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="cast" className="pull-left">Cast</label>

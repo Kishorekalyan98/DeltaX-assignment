@@ -8,7 +8,7 @@ class MoviesRow extends React.Component {
     render() {
         return (
             <tr>
-                <th scope="row"><img width="200" height="100" src={this.posterPath + this.rowData.poster} className="img-thumbnail" alt={this.rowData.name} /> </th>
+                <th scope="row"><img width="200" height="100" src={this.rowData.poster} className="img-thumbnail" alt={this.rowData.name} /> </th>
                 <td>{this.rowData.name}</td>
                 <td>{this.rowData.releaseYear}</td>
                 <td>{this.rowData.plot}</td>
