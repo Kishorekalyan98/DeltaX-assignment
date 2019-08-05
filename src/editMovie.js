@@ -164,7 +164,7 @@ class EditMovie extends React.Component {
                         </div>
                     </div>
                     <div className="col-xs-6">
-                        <img width="200" height="100" style={{marginLeft:'20%'}} className="img-thumbnail" src={this.state.movie.poster} />
+                        <img width="200" height="100" style={{marginLeft:'20%'}} className="img-thumbnail poster" src={this.state.movie.poster} />
                     </div>
                 </div>
             </div>

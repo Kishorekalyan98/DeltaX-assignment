@@ -4,7 +4,7 @@ class Modal extends React.Component {
     constructor(props) {
         super(props);
         this.saveBtn = this.saveBtn.bind(this);
-        console.log(window.location.href);
+        this.cancelUrl = window.location.href.includes("edit-movie") ? window.location.href : "/";
     }
     componentDidMount() {
         let today = new Date(),
@@ -102,7 +102,7 @@ class Modal extends React.Component {
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="buttons" align="right">
-                                <a href="/add-movie" className="btn btn-danger">Cancel</a>
+                                <a href={this.cancelUrl} className="btn btn-danger">Cancel</a>
                                 <button type="button" onClick={this.saveBtn} className="btn btn-success">Done</button>
                             </div>
                         </div>

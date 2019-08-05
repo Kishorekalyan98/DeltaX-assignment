@@ -78,3 +78,6 @@
 .margin-bottom-plot {
     margin-bottom: 35px;
 }
+.img-thumbnail.poster {
+ width: 150px;
+}
