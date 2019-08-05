@@ -4,6 +4,7 @@ class MoviesRow extends React.Component {
         super(props);
         this.rowData = this.props.data;
         this.posterPath = "/posters/";
+        this.url = "edit-movie/"+this.rowData.id;
     }
     render() {
         return (
@@ -13,7 +14,7 @@ class MoviesRow extends React.Component {
                 <td>{this.rowData.releaseYear}</td>
                 <td>{this.rowData.plot}</td>
                 <td>{this.rowData.cast}</td>
-                <td><a className="btn" href="javascript:void(0);">Edit</a></td>
+                <td><a className="btn" href={this.url}>Edit</a></td>
             </tr>
         );
     }

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import AddMovie from './addMovie.js';
+import EditMovie from './editMovie.js';
 import * as serviceWorker from './serviceWorker';
 class Apps extends React.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Apps extends React.Component {
                 <Switch>
                     <Route exact path="/" component={App} />
                     <Route path="/add-movie" component={AddMovie} />
+                    <Route path="/edit-movie/:id" component={EditMovie} />
                 </Switch>
             </Router>
         )
